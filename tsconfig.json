@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@themeConfig": ["themeConfig.ts"],
+      "@core/*": ["src/@core/*"],
+      "@layouts/*": ["src/@layouts/*"],
+      "@images/*": ["static/images/*"],
+      "@styles/*": ["src/styles/*"],
+      "@configured-variables/*": ["src/styles/variables/_template.scss"],
+      "@axios": ["src/plugins/axios.ts"],
+      "@validators/*": ["src/@core/utils/validators/*"],
+      "apexcharts": ["node_modules/apexcharts-clevision"],
+      "@vueuse/core": ["node_modules/@vueuse/core/dist/index.d.ts"]
+    },
+    "types": [
+      "webpack-env",
+      "@floating-ui/dom"
+    ],
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "shims-vue.d.ts",
+    "shims.d.ts",
+    "./**/*.*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+}
